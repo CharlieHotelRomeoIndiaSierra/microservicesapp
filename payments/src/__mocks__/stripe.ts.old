@@ -1,0 +1,21 @@
+// export const stripe = {
+//   charges: {
+//     create: jest.fn().mockResolvedValue({})
+//   }
+// }
+
+// Paste below imports of new.test.ts and remove .old from this file
+// jest.mock('../../stripe');
+
+// Remove process.env.STRIPE_KEY from setup.ts in test file
+
+/*
+  Put this at end of new.test file
+
+  const chargeOptions = (stripe.charges.create as jest.Mock).mock.calls[0][0];
+
+  expect(chargeOptions.source).toEqual('tok_visa');
+  expect(chargeOptions.amount).toEqual(20 * 100);
+  expect(chargeOptions.currency).toEqual('usd');
+
+  */
