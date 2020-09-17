@@ -6,7 +6,8 @@ export default ({ req }) => {
     // requests should be made to http://SERVICENAME.NAMESPACE.svc.cluster.local/ROUTE
     // kubectl get namespace, then kubectl get services -n NAMESPACE (servicename is of LoadBalancer type)
     return axios.create({
-      baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
+      // baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local', // uncomment for dev
+      baseURL: 'http://www.microservicesapp.com', // comment for dev
       headers: req.headers
     });
   } else {
